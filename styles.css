@@ -114,13 +114,18 @@ nav ul li {
   display: inline-block;
   padding: 0.5rem;
   background-color: var(--news-flash);
-  
 }
 
 nav ul li a {
   text-decoration: none;
   color: var(--watchdog-white);
 }
+
+nav li:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 
 /* ///ADD/// Global Layout Styles */
 header, footer {
@@ -142,7 +147,7 @@ footer {
   grid-template-rows: 1fr 1fr;
 }
 
-#footer-nav li {
+#social li {
   display: inline-block;
   padding: 0.5rem;
   background-color: var(--news-flash);
@@ -150,13 +155,61 @@ footer {
 
 main {
   padding: 3rem;
-  background-color: var(--watchdog-white);
 }
 
-#subscribe {
+#breaking-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin-bottom: 1rem;;
+}
+
+#breaking-news h2 {
+  grid-column: 1 / 3;
+}
+
+.breaking-news-article h3{
+  color: var(--watchdog-white);
+  border-bottom: 1px solid var(--watchdog-white);
+  margin-bottom: 0.5rem;
+}
+
+.breaking-news-article {
+  background-color: var(--news-flash);
+  padding: 1rem;
+  color: var(--watchdog-white);
+  font-variation-settings: "wght" 300;
+  height: 300px;
+  border: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+}
+
+#featured-articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  height: auto;
+}
+
+#featured-articles h2 {
+  grid-column: 1 / 4;
+}
+
+.featured h3 {
+  border-bottom: 0.75px solid var(--story-subtitle);
+  margin-bottom: 0.5rem;
+}
+
+.featured {
+  border: 1px solid var(--story-subtitle);
+  padding: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+#alerts {
   padding: 3rem;
   padding-top: 0;
-  background-color: var(--watchdog-white);
 }
 
 form {
@@ -167,21 +220,22 @@ form {
 h1 {
   font-family: var(--font-heading);
   font-size: 3rem;
-  color: var(--watchdog-white);
+  font-variation-settings: "wght" 300;
 }
 
 h2, h3 {
   font-family: var(--font-heading);
-  color: var(--truth-text);
 }
 
 h2 {
   font-size: 1.75rem;
   padding: 1rem 0;
+  font-variation-settings: "wght" 300;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-variation-settings: "wght" 300;
 }
 
 .tagline {
@@ -189,17 +243,18 @@ h3 {
   font-family: var(--font-heading);
 }
 
+blockquote {
+  text-align: center;
+  font-variation-settings: "wght" 600;
+}
+
 body {
   font-family: var(--font-body);
-  line-height: 1.5rem;
-  color: var(--truth-text);
+  font-size: 0.85rem;
+  line-height: 1.4rem;
 }
 
-footer h2 {
-  color: var(--watchdog-white);
-}
-
-nav ul li, #footer-nav li {
+nav ul li, #social li {
   font-family: var(--font-body);
   text-transform: uppercase;
   margin-right: 0.5rem;
