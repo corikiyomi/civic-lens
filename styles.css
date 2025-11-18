@@ -8,7 +8,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -27,9 +27,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-} */
+}
 /* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -50,7 +50,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-} */
+}
 
 /* Root Variables */
 :root {
@@ -85,14 +85,133 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
+#skip-link {
+  position:absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
 
 /* ///ADD/// Navigation Styles */
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+nav ul {
+  grid-column: 1 / 3;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: var(--news-flash);
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--watchdog-white);
+}
 
 /* ///ADD/// Global Layout Styles */
+header, footer {
+  background-color: var(--blue-bulletin);
+  width: 100%;
+  color: var(--watchdog-white);
+}
+
+header {
+  padding: 2rem 3rem 0.5rem 3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+footer {
+  height: auto;
+  padding: 1rem 3rem 0.5rem 3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+#footer-nav li {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: var(--news-flash);
+}
+
+main {
+  padding: 3rem;
+  background-color: var(--watchdog-white);
+}
+
+#subscribe {
+  padding: 3rem;
+  padding-top: 0;
+  background-color: var(--watchdog-white);
+}
+
+form {
+  background-color: var(--news-flash);
+}
 
 /* ///ADD/// Global Text Styles */
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--watchdog-white);
+}
 
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--truth-text);
+}
 
+h2 {
+  font-size: 1.75rem;
+  padding: 1rem 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.tagline {
+  padding-top: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.5rem;
+  color: var(--truth-text);
+}
+
+footer h2 {
+  color: var(--watchdog-white);
+}
+
+nav ul li, #footer-nav li {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+small {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1rem 0;
+}
 /* ///ADD/// medium styles 620px */
 
 
