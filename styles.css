@@ -100,7 +100,6 @@ body.dark-mode {
 }
 
 /* MOBILE FIRST */
-
 /* ///ADD/// Navigation Styles */
 nav {
   padding: 0 6rem 0 0;
@@ -192,6 +191,15 @@ main {
   border: 1px solid var(--truth-text);
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+.featured {
+  transition: transform 0.3s;
+}
+.breaking-news-article:hover, .featured:hover {
+  /* Make larger */
+  transform: scale(1.05);
+  cursor: pointer;
 }
 video {
   width: 100%;
