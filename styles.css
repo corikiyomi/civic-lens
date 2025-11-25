@@ -28,6 +28,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -102,7 +103,7 @@ body.dark-mode {
 /* MOBILE FIRST */
 /* ///ADD/// Navigation Styles */
 nav {
-  padding: 0 6rem 0 0;
+  padding: 0 3rem 0 0;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -150,17 +151,17 @@ nav li:hover, #social li:hover {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
 /* ///ADD/// Global Layout Styles */
 header, footer {
   background-color: var(--blue-bulletin);
-  max-width: 100%;
+  max-width: 100vw;
   color: var(--watchdog-white);
 }
 header {
-  padding: 2rem 1rem 0.5rem 3rem;
+  padding: 2rem 1rem 0.5rem 2rem;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 footer {
   height: auto;
@@ -224,17 +225,48 @@ video {
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
 }
-#alerts {
-  padding: 3rem;
-  padding-top: 0;
-}
 form {
   background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  padding: 1.5rem;
+  display: block;
 }
+input[type="text"], input[type="tel"]{
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+legend{
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+fieldset {
+  border: 1px solid var(--blue-bulletin);
+  padding-left: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+input[type="checkbox"]{
+  transform: scale(1.5);
+  margin-right: 0.5rem;
+}
+label{
+  padding-bottom: 0.5rem;
+}
+input[type="submit"]{
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: var(--blue-bulletin);
+  text-transform: uppercase;
+  color: var(--watchdog-white);
+  font-family: var(--font-body);
+  padding: 0.5rem;
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+}  
 #social li:hover {
   transition: background-color 0.3s ease-in-out;
 }
-
 /* ///ADD/// Global Text Styles */
 h1 {
   font-family: var(--font-heading);
@@ -334,6 +366,9 @@ small {
     display: block;
     grid-column: 1;
   }
+  fieldset{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* ///ADD/// large styles 920px */
@@ -350,16 +385,19 @@ small {
   .featured:nth-child(even) {
     grid-column: auto;
   }
+  fieldset{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width:1024px) {
-  main, #alerts {
-    max-width: 80vw;
+  main {
+    max-width: 75vw;
     margin: 0 auto;
   }
   header, footer {
-    max-width: 80vw;
+    max-width: 100vw;
     margin: 0 auto;
     padding-left: 9rem;
     padding-right: 9rem;
@@ -367,9 +405,25 @@ small {
 }
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
-
+@media (prefers-color-scheme: dark) {
+  body.dark-mode{
+    background-color: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body.light-mode{
+    background-color: var(--watchdog-white);
+    color: var(--truth-text);
+  }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  #menu-toggle:checked ul{
+    position: absolute;
+    top: 9.25rem;
+    display: block;
+    z-index: 1;
+  }
 }

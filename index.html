@@ -6,19 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
   <meta name="author" content="Civic Lens">
-  <!-- ADD Open Graph Meta for title, description, image, url, type -->
   <meta property="og:title" content="Civic Lens">
   <meta property="og:description" content="">
   <meta property="og:type" content="website">
   <meta property="og:image" content="">
   <meta property="og:url" content="https:github.com/corikiyomi/civic-lens/">
-  <!-- ADD link to stylesheet -->
   <link rel="stylesheet" href="styles.css">
   <title>Civic Lens</title>
 </head>
 <body>
-<!-- ADD semantic and validated HTML -->
-  <!-- ADD skip to main content -->
   <a id="skip-link" href="#main">Skip to content</a>
   <header>
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
@@ -30,8 +26,9 @@
     <h1>Civic Lens</h1>
     <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
     <nav class="mobile-nav" aria-label="Mobile Navigation">
-      <input type="checkbox" id="menu-toggle" hidden>
-      <label for="menu-toggle" class="menu-button">Menu</label>
+      <label for="menu-toggle" class="menu-button">
+        <input type="checkbox" id="menu-toggle" hidden>Menu
+      </label>
       <ul class="menu">
         <li><a href="#breaking-news">Breaking News</a></li>
         <li><a href="#featured-articles">Featured Articles</a></li>
@@ -40,7 +37,6 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <h2>Welcome to Civic Lens</h2>
       <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
@@ -115,30 +111,42 @@
           <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
         </article>
     </section>
+    <section id="alerts">
+      <h2>Stay Informed. Stay Empowered.</h2>
+        <p>Receive text messages with the news you want to know.</p>
+        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+          <label for="mobile">Mobile</label>
+          <input id="mobile" name="mobile" type="tel" required>
+          <fieldset>
+            <legend>Notification Preferences</legend>
+            <label class="inline-checkbox" for="breaking">
+              <input type="checkbox" id="breaking" name="breaking" value="Breaking-News">Breaking News
+            </label>
+            <label class="inline-checkbox" for="politics">
+              <input type="checkbox" id="politics" name="politics" value="Politics">Politics
+            </label>
+            <label class="inline-checkbox" for="weather">
+              <input type="checkbox" id="weather" name="weather" value="Weather">Weather
+            </label>
+            <label class="inline-checkbox" for="sports">
+              <input type="checkbox" id="sports" name="sports" value="Sports">Sports
+            </label>
+            <label class="inline-checkbox" for="entertainment">
+              <input type="checkbox" id="entertainment" name="entertainment" value="Entertainment">Entertainment
+            </label>
+            <label class="inline-checkbox" for="world">
+              <input type="checkbox" id="world" name="world" value="World">World
+            </label>
+            <label class="inline-checkbox" for="financial">
+              <input type="checkbox" id="financial" name="financial" value="Financial">Financial
+            </label>
+          </fieldset>
+          <input type="submit" value="Subscribe">
+        </form>
+    </section>
   </main>
-  <section id="alerts">
-    <h2>Stay Informed. Stay Empowered.</h2>
-      <p>Receive text messages with the news you want to know.</p>
-      <form>
-        <!-- Name
-        
-        Mobile
-        
-        Notification Preferences
-        
-        Breaking News
-        Politics
-        Weather
-        Sports
-        Entertainment
-        World
-        Financial
-        
-        Subscribe -->
-
-
-      </form>
-  </section>
   <footer>
     <h2>Follow Us</h2>
     <ul id="social">
